@@ -1,8 +1,3 @@
-/'Let\'s play with Generics!'/GenericAlgorithms/bin
-/'Let\'s play with Generics!'/GenericAlgorithms/obj
-
-/'Let\'s play with Generics!'/GenericAlgorithmsTesting/bin
-/'Let\'s play with Generics!'/GenericAlgorithmsTesting/obj
-
-/'Let\'s play with Generics!'/GetStats/bin
-/'Let\'s play with Generics!'/GetStats/obj
+# Build
+bin
+obj
