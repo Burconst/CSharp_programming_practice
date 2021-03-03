@@ -4,9 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ContextPlayer"
-             mc:Ignorable="d" Height="452" Width="330">
-    <Grid Height="452" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="341" Margin="-11,0,0,0">
-        <Grid.RowDefinitions>
+             mc:Ignorable="d"  Width="250" Height="167">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="New folder\Background.jpg"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Button x:Name="btAdd" Margin="224,29,0,118"/>
+        <ListBox x:Name="lbPlayList" HorizontalAlignment="Left"
+                 Height="20" Margin="38,29,0,0"
+                 VerticalAlignment="Top" Width="186"
+                 Background="{x:Null}"/>
+        <Button x:Name="btRemove" Margin="0,29,227,118"/>
+
+        <Button x:Name="btPrevious" Margin="66,121,148,19"
+                Background="{x:Null}"/>
+        <Button x:Name="btPlay" Margin="107,121,107,19" 
+                Background="{x:Null}"/>
+        <Button x:Name="btNext" Margin="148,121,66,19"
+                Background="{x:Null}"/>
+        
+        <Button x:Name="btVolume" Margin="204,121,10,19"
+                Background="{x:Null}"/>
+        
+    </Grid>
+    <!--<Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Width="330" Background="#FFFFEDED" Height="91.667" VerticalAlignment="Bottom" Margin="0,0,0,360.333">
@@ -29,13 +52,13 @@
                     </TransformGroup>
                 </Slider.RenderTransform>
             </Slider>
-            <TextBox x:Name="tbTitle" Height="18" Canvas.Left="18" TextWrapping="Wrap" Canvas.Top="10" Background="{x:Null}" BorderBrush="{x:Null}" Text="title" SelectionBrush="{x:Null}" Margin="10,0,10,55.584" VerticalAlignment="Bottom"/>
-        </Grid>
-        <Grid Width="330" RenderTransformOrigin="0.742,0.241" HorizontalAlignment="Left" Margin="0,91.667,0,0">
+            <TextBox x:Name="tbTitle" Height="18" Canvas.Left="18" TextWrapping="Wrap" Canvas.Top="10" Background="{x:Null}" BorderBrush="{x:Null}" Text="" SelectionBrush="{x:Null}" Margin="10,0,10,55.584" VerticalAlignment="Bottom"/>
+        </Grid>-->
+    <!--<Grid Width="330" RenderTransformOrigin="0.742,0.241" HorizontalAlignment="Left" Margin="0,91.667,0,0">
             <Rectangle Fill="#FF7575FF" Canvas.Top="251.333" Height="29.75" VerticalAlignment="Top"/>
             <ListBox x:Name="lbPlayList" Canvas.Top="41" MouseDoubleClick="lbPlayList_MouseDoubleClick" Margin="0,30,0,31.667" Width="330"/>
             <Rectangle Fill="#FF7575FF" Height="31.667" VerticalAlignment="Bottom"/>
             <Button x:Name="btAdd" Content="Add" Canvas.Left="10" Canvas.Top="10" Width="91" Height="20" Click="btAdd_Click" Margin="39,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        </Grid>
-    </Grid>
+        </Grid>-->
+
 </UserControl>
