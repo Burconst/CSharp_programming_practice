@@ -1,0 +1,38 @@
+﻿<!--
+Linq2_kk Калюжный К.А, июнь 2019 г.
+
+Демонстрация создания списка персон, каждая из которых задана структурой.
+Использованы примеры выборки с помощью LINQ-запросов.
+Использованы регулярные выражения для проверки корректности введённых данных    
+-->
+
+<Window x:Class="Linq2_kk.WAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Linq2_kk"
+        mc:Ignorable="d"
+        Title="Добавить" Height="347.523" Width="363.962" Icon="Resources/data-512.ico">
+    <Grid>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Height="30" Margin="15,34,0,0" VerticalAlignment="Top" Width="125" FontSize="16" HorizontalContentAlignment="Right"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Height="30" Margin="15,69,0,0" VerticalAlignment="Top" Width="125" FontSize="16" HorizontalContentAlignment="Right"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Height="30" Margin="15,104,0,0" VerticalAlignment="Top" Width="125" FontSize="16" HorizontalContentAlignment="Right"/>
+        <Label Content="Профессия" HorizontalAlignment="Left" Height="30" Margin="15,151,0,0" VerticalAlignment="Top" Width="125" FontSize="16" HorizontalContentAlignment="Right"/>
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Height="30" Margin="15,187,0,0" VerticalAlignment="Top" Width="125" FontSize="16" HorizontalContentAlignment="Right"/>
+        <Label Content="Дата смерти" HorizontalAlignment="Left" Height="30" Margin="37,224,0,0" VerticalAlignment="Top" Width="102" FontSize="16" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="tbLName" HorizontalAlignment="Left" Height="30" Margin="145,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tbFName" HorizontalAlignment="Left" Height="30" Margin="145,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tbPatr" HorizontalAlignment="Left" Height="30" Margin="145,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tbProff" HorizontalAlignment="Left" Height="30" Margin="145,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16" VerticalContentAlignment="Center"/>
+        <DatePicker x:Name="dpBirthDay" HorizontalAlignment="Left" Margin="145,187,0,0" VerticalAlignment="Top" Height="30" Width="201" VerticalContentAlignment="Center"/>
+        <DatePicker x:Name="dpDeathDay" HorizontalAlignment="Left" Margin="145,224,0,0" VerticalAlignment="Top" Height="30" Width="201" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <CheckBox x:Name="cbIsDead" HorizontalAlignment="Left" Margin="15,233,0,0" VerticalAlignment="Top" Click="CbIsDead_Click"/>
+        <Button x:Name="btAdd" Content="Добавить" HorizontalAlignment="Left" Height="30" Margin="179,277,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="BtAdd_Click"/>
+        <Button Content="Закрыть" HorizontalAlignment="Left" Height="30" Margin="271,277,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="Button_Click"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" Margin="0,-1,0,0" VerticalAlignment="Top" Width="356">
+            <MenuItem Header="Форма записи" Height="20" Click="MenuItem_Click"/>
+        </Menu>
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<!--
+ LinqToSql-1_kk - Калюжный К.А. 241 гр.июнь 2019 г.
+ Создание и работа с базой данных, созданной на основе списка
+ созданного в приложении Linq2_kk
+ -->
+
+<Window x:Class="LinqToSql_1_kk.WAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinqToSql_1_kk"
+        mc:Ignorable="d"
+        Title="О программе" Height="187.184" Width="591.618" ResizeMode="NoResize" Icon="Resources/data-512.ico">
+    <Grid Margin="0,0,0,-1.333">
+        <TextBlock HorizontalAlignment="Left" Height="86" TextWrapping="Wrap" VerticalAlignment="Top" Width="543" Margin="23,10,0,0" FontSize="18"><Span Foreground="Black"><Run Text=" LinqToSql-1_kk - Калюжный К.А. 241 гр.июнь 2019 г."/></Span><LineBreak/><Span Foreground="Black"><Run Text=" Создание и работа с базой данных, созданной на основе списка"/></Span><LineBreak/><Span Foreground="Black"><Run Text=" созданного в приложении Linq2_kk"/></Span></TextBlock>
+        <Button Content="Закрыть" Margin="450,120,55,0" Height="20" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>
