@@ -61,14 +61,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Person.cs" />
-    <Compile Include="WAbout.xaml.cs">
-      <DependentUpon>WAbout.xaml</DependentUpon>
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PersonBuilder.cs" />
+    <Compile Include="ViewModel\AddViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="View\AddView.xaml.cs">
+      <DependentUpon>AddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WAdd.xaml.cs">
-      <DependentUpon>WAdd.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -76,15 +76,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WAbout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WAdd.xaml">
+    <Page Include="View\AddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,5 +117,6 @@
   <ItemGroup>
     <SplashScreen Include="Resources\data-512 - Copy.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

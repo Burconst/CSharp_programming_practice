@@ -7,7 +7,7 @@
 using System;
 using System.Windows;
 
-namespace Linq1_kk
+namespace LINQ.View
 {
     /// <summary>
     /// Interaction logic for WAdd.xaml

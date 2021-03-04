@@ -1,10 +1,4 @@
-﻿//Linq1_kk Калюжный К.А, июнь 2019 г.
-
-//Демонстрация создания списка персон, каждая из которых задана структурой.
-//Использованы примеры выборки с помощью LINQ-запросов.
-
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.Win32;
@@ -20,22 +14,14 @@ namespace System.Runtime.CompilerServices
     sealed class CallerMemberNameAttribute : Attribute { }
 }
 
-namespace Linq1_kk
+namespace LINQ.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        /// <summary>
-        /// Основной список персон
-        /// </summary>
-        List<Person> personList = new List<Person>();
 
-        /// <summary>
-        /// Номер текущей персоны
-        /// </summary>
-        private int currPers = 0;
 
         /// <summary>
         /// Событие для реализации интерфейса INotifyPropertyChanged
@@ -312,7 +298,6 @@ namespace Linq1_kk
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             mainGrid.Effect = blur;
-            new WAbout().ShowDialog();
             mainGrid.Effect = default(Effect);
         }
 

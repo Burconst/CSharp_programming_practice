@@ -1,0 +1,105 @@
+﻿<Window x:Class="LINQ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LINQ"
+        mc:Ignorable="d"
+        Title="LINQ" Height="358" Width="679" ResizeMode="CanMinimize" Icon="../Resources/data-512.ico" MinHeight="380" MinWidth="930">
+    <Grid x:Name="mainGrid" >
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem x:Name="miOpen" Header="Open" Click="MiOpen_Click"/>
+                <MenuItem x:Name="miSave" Header="Save" Click="MiSave_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <ListView Name="Persons" Margin="10,60,306,10"  ItemsSource="{Binding Persons}"  >
+            <ListView.View>
+                <GridView x:Name="grdTest">
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}"  Width="80" />
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}" Width="100" />
+                    <GridViewColumn Header="Patronymic" DisplayMemberBinding="{Binding Patronymic}" Width="100" />
+                    <GridViewColumn Header="Birth Date" DisplayMemberBinding="{Binding BirthDate}" Width="80" />
+                    <GridViewColumn Header="Death Date" DisplayMemberBinding="{Binding DeathDate}" Width="80" />
+                    <GridViewColumn Header="Profession" DisplayMemberBinding="{Binding Profession}" Width="80" />
+                    <GridViewColumn Header="Is Dead" DisplayMemberBinding="{Binding IsDead}" Width="80" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label Content="Last name" Margin="0,30,211,0" Height="30" Width="90"
+               HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="First name" Margin="0,65,211,0" Height="30" Width="90"
+               HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="Patronymic" Margin="0,100,211,0" Height="30" Width="90"
+               HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="Profession" Margin="0,135,211,0" Height="30" Width="90"
+               HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="Birth Date" Margin="0,170,211,0" Height="30" Width="90"
+              HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="Death Date" Margin="0,203,211,0" Height="30" Width="90"
+              HorizontalContentAlignment="Right" VerticalAlignment="Top"
+               FontSize="14" HorizontalAlignment="Right"/>
+
+        <Label Content="Person count"
+               Margin="0,0,170,45" 
+               FontSize="16" HorizontalContentAlignment="Right"
+               VerticalContentAlignment="Center" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="131"/>
+
+        <Label Content="Person number"
+               Margin="0,0,165,10"
+               FontSize="16" VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Right" HorizontalAlignment="Right" Width="136" Height="30" VerticalAlignment="Bottom"/>
+
+        <TextBox x:Name="tbLName" 
+                 Margin="0,30,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbFName"
+                 Margin="0,65,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbPatr" 
+                 Margin="0,100,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbProff"
+                 Margin="0,135,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
+
+        <Button x:Name="btCorr" Content="Править" Margin="0,240,170,0"
+                FontSize="14" Click="BtCorr_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="btAdd" Content="Добавить" Margin="0,240,90,0"
+                FontSize="14" Click="BtAdd_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="btRemove" Content="Удалить" Margin="0,240,10,0"
+                FontSize="14" Click="BtRemove_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+
+        <TextBox x:Name="tbCountPer"
+                 Text="{Binding Path=PersonCount, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,90,45" TextWrapping="Wrap" FontSize="16" IsReadOnly="True" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="tbNumbCurr"
+                 Text="{Binding Path=CurrPers, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,90,10" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="75" Height="30" VerticalAlignment="Bottom"/>
+
+        <Button x:Name="btNext" Content="Следующая&#xD;&#xA;   персона"  Width="75" Margin="0,0,10,10"
+                Click="BtNext_Click" HorizontalAlignment="Right" Height="65" VerticalAlignment="Bottom"/>
+
+        <DatePicker x:Name="dpBirthDay" Margin="0,170,10,0"
+                    VerticalAlignment="Top" Height="30"
+                    VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201"/>
+        <DatePicker x:Name="dpDeathDay" Margin="0,205,10,0"
+                    VerticalAlignment="Top" Height="30"
+                    VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Right" Width="201"/>
+
+        <Label Content="Sort by" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0"
+               VerticalAlignment="Top" Width="60" FontSize="16"/>
+
+        <ComboBox x:Name="cbSort" HorizontalAlignment="Left" Height="30" Margin="75,25,0,0"
+                  VerticalAlignment="Top" Width="222" FontSize="16" SelectionChanged="CbSort_SelectionChanged"
+                  SelectedIndex="0">
+            <Label Content="фамилиям умерших персон" Width="200" FontSize="14"/>
+            <Label Content="фамилиям живущих персон" Width="200" FontSize="14"/>
+            <Label Content="дню и месяцу рождения" Width="200" FontSize="14"/>
+            <Label Content="первой профессии" Width="200" FontSize="14"/>
+        </ComboBox>
+    </Grid>
+</Window>
