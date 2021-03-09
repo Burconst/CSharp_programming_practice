@@ -4,13 +4,19 @@
              xmlns:local="clr-namespace:Linq1_kk"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-
-
-        <SolidColorBrush x:Key="BackgroundBrush"                          Color="#FF585858"/>        <SolidColorBrush x:Key="LabelForegroundColor"                          Color="White"/>
-        <SolidColorBrush x:Key="ButtonForegroundColor"                          Color="White"/>
-        <SolidColorBrush x:Key="ButtonBackgroundColor"                          Color="#FF3E3E3E"/>
-        <SolidColorBrush x:Key="TextBoxForegroundColor"                          Color="White"/>
-        <SolidColorBrush x:Key="TextBoxBackgroundColor"                          Color="#FF3E3E3E"/>
+    
+        <SolidColorBrush x:Key="BackgroundBrush" 
+                         Color="#FF585858"/>
+        <SolidColorBrush x:Key="LabelForegroundColor" 
+                         Color="White"/>
+        <SolidColorBrush x:Key="ButtonForegroundColor" 
+                         Color="White"/>
+        <SolidColorBrush x:Key="ButtonBackgroundColor" 
+                         Color="#FF3E3E3E"/>
+        <SolidColorBrush x:Key="TextBoxForegroundColor" 
+                         Color="White"/>
+        <SolidColorBrush x:Key="TextBoxBackgroundColor" 
+                         Color="#FF3E3E3E"/>
 
         <Style x:Key="PersonInfoLabelStyle" TargetType="{x:Type Label}">
             <Setter Property="FontSize" Value="14" />

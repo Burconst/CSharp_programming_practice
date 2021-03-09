@@ -59,15 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Person.cs" />
-    <Compile Include="WAbout.xaml.cs">
-      <DependentUpon>WAbout.xaml</DependentUpon>
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="View\AddView.xaml.cs" />
+    <Compile Include="View\FormView.xaml.cs">
+      <DependentUpon>FormView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WAdd.xaml.cs" />
-    <Compile Include="WForm.xaml.cs">
-      <DependentUpon>WForm.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,19 +72,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WAbout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WAdd.xaml">
+    <Page Include="View\AddView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WForm.xaml">
+    <Page Include="View\FormView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

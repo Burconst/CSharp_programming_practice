@@ -1,11 +1,4 @@
-﻿//Linq2_kk Калюжный К.А, июнь 2019 г.
-
-//Демонстрация создания списка персон, каждая из которых задана структурой.
-//Использованы примеры выборки с помощью LINQ-запросов.
-//Использованы регулярные выражения для проверки корректности введённых данных
-
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.Win32;
@@ -21,7 +14,7 @@ namespace System.Runtime.CompilerServices
     sealed class CallerMemberNameAttribute : Attribute { }
 }
 
-namespace Linq2_kk
+namespace LINQ.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

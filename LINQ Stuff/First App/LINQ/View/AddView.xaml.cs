@@ -1,11 +1,7 @@
-﻿//Linq1_kk Калюжный К.А, июнь 2019 г.
-
-//Демонстрация создания списка персон, каждая из которых задана структурой.
-//Использованы примеры выборки с помощью LINQ-запросов.
-
-
-using System;
+﻿using System;
 using System.Windows;
+
+using LINQ.ViewModel;
 
 namespace LINQ.View
 {

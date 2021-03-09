@@ -9,6 +9,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media.Effects;
 
+using LINQ.ViewModel;
+
 namespace System.Runtime.CompilerServices
 {
     sealed class CallerMemberNameAttribute : Attribute { }
