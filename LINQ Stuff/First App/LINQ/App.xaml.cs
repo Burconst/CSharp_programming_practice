@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Linq1_kk
+namespace LINQ
 {
     /// <summary>
     /// Interaction logic for App.xaml

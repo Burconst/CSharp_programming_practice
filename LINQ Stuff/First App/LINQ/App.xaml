@@ -1,22 +1,22 @@
-﻿<Application x:Class="Linq1_kk.App"
+﻿<Application x:Class="LINQ.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Linq1_kk"
-             StartupUri="View/MainWindow.xaml">
+             xmlns:local="clr-namespace:LINQ"
+             StartupUri="View/MainWindowView.xaml">
     <Application.Resources>
     
         <SolidColorBrush x:Key="BackgroundBrush" 
-                         Color="#FF585858"/>
+                         Color="#1C3D47"/>
         <SolidColorBrush x:Key="LabelForegroundColor" 
-                         Color="White"/>
+                         Color="#ADCAD2"/>
         <SolidColorBrush x:Key="ButtonForegroundColor" 
-                         Color="White"/>
+                         Color="#ADCAD2"/>
         <SolidColorBrush x:Key="ButtonBackgroundColor" 
-                         Color="#FF3E3E3E"/>
+                         Color="#00394A"/>
         <SolidColorBrush x:Key="TextBoxForegroundColor" 
-                         Color="White"/>
+                         Color="#ADCAD2"/>
         <SolidColorBrush x:Key="TextBoxBackgroundColor" 
-                         Color="#FF3E3E3E"/>
+                         Color="#00394A"/>
 
         <Style x:Key="PersonInfoLabelStyle" TargetType="{x:Type Label}">
             <Setter Property="FontSize" Value="14" />
@@ -64,6 +64,7 @@
         <Style x:Key="StatusBarStyle" TargetType="{x:Type StatusBar}">
             <Setter Property="Height" Value="14" />
             <Setter Property="Width" Value="924" />
+            <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="HorizontalAlignment" Value="Left" />
         </Style>
