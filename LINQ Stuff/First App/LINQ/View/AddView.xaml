@@ -5,67 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LINQ"
         mc:Ignorable="d"
-        Title="Добавить" Height="324.856" Width="363.962" 
+        Title="Add" Height="319" Width="313"
+        ResizeMode="NoResize"
+        Background= "{StaticResource BackgroundBrush}"
         Icon="../Resources/data-512.ico">
     <Grid>
-        <Label Content="Фамилия" HorizontalAlignment="Left" Height="30"
-               Margin="10,11,0,0" VerticalAlignment="Top" Width="125"
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <Label Content="Имя" HorizontalAlignment="Left" Height="30"
-               Margin="10,46,0,0" VerticalAlignment="Top" Width="125"
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <Label Content="Отчество" HorizontalAlignment="Left" Height="30"
-               Margin="10,81,0,0" VerticalAlignment="Top" Width="125"
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <Label Content="Профессия" HorizontalAlignment="Left" Height="30"
-               Margin="10,128,0,0" VerticalAlignment="Top" Width="125"
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <Label Content="Дата рождения" HorizontalAlignment="Left" Height="30"
-               Margin="10,164,0,0" VerticalAlignment="Top" Width="125"
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <Label Content="Дата смерти" HorizontalAlignment="Left" Height="30"
-               Margin="32,201,0,0" VerticalAlignment="Top" Width="102" 
-               FontSize="16" HorizontalContentAlignment="Right"/>
-        
-        <TextBox x:Name="tbLName" HorizontalAlignment="Left" Height="30"
-                 Margin="140,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="201" FontSize="16" VerticalContentAlignment="Center"/>
-        
-        <TextBox x:Name="tbFName" HorizontalAlignment="Left" Height="30"
-                 Margin="140,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="201" FontSize="16" VerticalContentAlignment="Center"/>
-        
-        <TextBox x:Name="tbPatr" HorizontalAlignment="Left" Height="30" 
-                 Margin="140,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="201" FontSize="16" VerticalContentAlignment="Center"/>
-        
-        <TextBox x:Name="tbProff" HorizontalAlignment="Left" Height="30" 
-                 Margin="140,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="201" FontSize="16" VerticalContentAlignment="Center"/>
-        
-        <DatePicker x:Name="dpBirthDay" HorizontalAlignment="Left"
-                    Margin="140,164,0,0" VerticalAlignment="Top"
-                    Height="30" Width="201" VerticalContentAlignment="Center"/>
-        
-        <DatePicker x:Name="dpDeathDay" HorizontalAlignment="Left"
-                    Margin="140,201,0,0" VerticalAlignment="Top" Height="30"
-                    Width="201" VerticalContentAlignment="Center" IsEnabled="False"/>
-        
-        <CheckBox x:Name="cbIsDead" HorizontalAlignment="Left" Margin="10,210,0,0" 
-                  VerticalAlignment="Top" Click="CbIsDead_Click"/>
-        
-        <Button x:Name="btAdd" Content="Добавить" HorizontalAlignment="Left"
-                Height="30" Margin="174,254,0,0" VerticalAlignment="Top" Width="75"
-                FontSize="14" Click="BtAdd_Click"/>
-        
-        <Button Content="Закрыть" HorizontalAlignment="Left" Height="30"
-                Margin="266,254,0,0" VerticalAlignment="Top" Width="75"
-                FontSize="14" Click="Button_Click"/>
+        <Label Content="Last name" Margin="0,30,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="First name" Margin="0,65,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Patronymic" Margin="0,100,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Profession" Margin="0,135,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Birth Date" Margin="0,170,211,0"
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Death Date" Margin="0,203,211,0"
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+
+        <TextBox x:Name="tbLName" Margin="0,30,10,0" 
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbFName" Margin="0,65,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbPatr" Margin="0,100,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbProff" Margin="0,135,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+
+        <DatePicker x:Name="dpBirthDay" Margin="0,170,10,0"
+                    Style="{StaticResource DatePickerStyle}"/>
+        <DatePicker x:Name="dpDeathDay" Margin="0,205,10,0"
+                    Style="{StaticResource DatePickerStyle}"
+                    IsEnabled="False"/>
+
+        <Button x:Name="btAdd" Content="Add" Margin="0,240,90,0" 
+                Style="{StaticResource ButtonsStyle}"
+                Click="BtAdd_Click"/>
+        <Button x:Name="btClose" Content="Close" Margin="0,240,10,0"
+                Style="{StaticResource ButtonsStyle}"
+                Click="BtClose_Click"/>
 
     </Grid>
 </Window>

@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LINQ"
         mc:Ignorable="d"
-        Title="LINQ" Height="358" Width="679" ResizeMode="CanMinimize" Icon="../Resources/data-512.ico" MinHeight="380" MinWidth="930">
+        Title="LINQ" Height="358" Width="679"
+        ResizeMode="CanMinimize" 
+        Icon="../Resources/data-512.ico"
+        Background= "{StaticResource BackgroundBrush}"
+        MinHeight="380" MinWidth="930">
     <Grid x:Name="mainGrid" >
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="File">
@@ -14,7 +18,8 @@
             </MenuItem>
         </Menu>
 
-        <ListView Name="Persons" Margin="10,60,306,10"  ItemsSource="{Binding Persons}"  >
+        <ListView Name="Persons" Margin="10,55,306,17.666" 
+                  ItemsSource="{Binding Persons}"  >
             <ListView.View>
                 <GridView x:Name="grdTest">
                     <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}"  Width="80" />
@@ -28,78 +33,66 @@
             </ListView.View>
         </ListView>
 
-        <Label Content="Last name" Margin="0,30,211,0" Height="30" Width="90"
-               HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
-        <Label Content="First name" Margin="0,65,211,0" Height="30" Width="90"
-               HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
-        <Label Content="Patronymic" Margin="0,100,211,0" Height="30" Width="90"
-               HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
-        <Label Content="Profession" Margin="0,135,211,0" Height="30" Width="90"
-               HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
-        <Label Content="Birth Date" Margin="0,170,211,0" Height="30" Width="90"
-              HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
-        <Label Content="Death Date" Margin="0,203,211,0" Height="30" Width="90"
-              HorizontalContentAlignment="Right" VerticalAlignment="Top"
-               FontSize="14" HorizontalAlignment="Right"/>
+        <Label Content="Last name" Margin="0,30,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="First name" Margin="0,65,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Patronymic" Margin="0,100,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Profession" Margin="0,135,211,0" 
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Birth Date" Margin="0,170,211,0"
+               Style="{StaticResource PersonInfoLabelStyle}"/>
+        <Label Content="Death Date" Margin="0,203,211,0"
+               Style="{StaticResource PersonInfoLabelStyle}"/>
 
-        <Label Content="Person count"
-               Margin="0,0,170,45" 
-               FontSize="16" HorizontalContentAlignment="Right"
-               VerticalContentAlignment="Center" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="131"/>
+        <TextBox x:Name="tbLName" Margin="0,30,10,0" 
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbFName" Margin="0,65,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbPatr" Margin="0,100,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
+        <TextBox x:Name="tbProff" Margin="0,135,10,0"
+                 Style="{StaticResource PersonInfoTextBoxStyle}"/>
 
-        <Label Content="Person number"
-               Margin="0,0,165,10"
-               FontSize="16" VerticalContentAlignment="Center"
-               HorizontalContentAlignment="Right" HorizontalAlignment="Right" Width="136" Height="30" VerticalAlignment="Bottom"/>
-
-        <TextBox x:Name="tbLName" 
-                 Margin="0,30,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbFName"
-                 Margin="0,65,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbPatr" 
-                 Margin="0,100,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbProff"
-                 Margin="0,135,10,0" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201" Height="30" VerticalAlignment="Top"/>
-
-        <Button x:Name="btCorr" Content="Править" Margin="0,240,170,0"
-                FontSize="14" Click="BtCorr_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
-        <Button x:Name="btAdd" Content="Добавить" Margin="0,240,90,0"
-                FontSize="14" Click="BtAdd_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
-        <Button x:Name="btRemove" Content="Удалить" Margin="0,240,10,0"
-                FontSize="14" Click="BtRemove_Click" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
-
-        <TextBox x:Name="tbCountPer"
-                 Text="{Binding Path=PersonCount, UpdateSourceTrigger=PropertyChanged}"
-                 Margin="0,0,90,45" TextWrapping="Wrap" FontSize="16" IsReadOnly="True" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
-        <TextBox x:Name="tbNumbCurr"
-                 Text="{Binding Path=CurrPers, UpdateSourceTrigger=PropertyChanged}"
-                 Margin="0,0,90,10" TextWrapping="Wrap" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="75" Height="30" VerticalAlignment="Bottom"/>
-
-        <Button x:Name="btNext" Content="Следующая&#xD;&#xA;   персона"  Width="75" Margin="0,0,10,10"
-                Click="BtNext_Click" HorizontalAlignment="Right" Height="65" VerticalAlignment="Bottom"/>
+        <Button x:Name="btEdit" Content="Edit" Margin="0,240,170,0"
+                Style="{StaticResource ButtonsStyle}"
+                Click="BtEdit_Click"/>
+        <Button x:Name="btAdd" Content="Add" Margin="0,240,90,0" 
+                Style="{StaticResource ButtonsStyle}"
+                Click="BtAdd_Click"/>
+        <Button x:Name="btRemove" Content="Remove" Margin="0,240,10,0"
+                Style="{StaticResource ButtonsStyle}"
+                Click="BtRemove_Click"/>
 
         <DatePicker x:Name="dpBirthDay" Margin="0,170,10,0"
-                    VerticalAlignment="Top" Height="30"
-                    VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="201"/>
+                    Style="{StaticResource DatePickerStyle}"/>
         <DatePicker x:Name="dpDeathDay" Margin="0,205,10,0"
-                    VerticalAlignment="Top" Height="30"
-                    VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Right" Width="201"/>
+                    Style="{StaticResource DatePickerStyle}"
+                    IsEnabled="False"/>
 
-        <Label Content="Sort by" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0"
-               VerticalAlignment="Top" Width="60" FontSize="16"/>
+        <Label Content="Sort by" Margin="10,25,0,0"
+               FontSize="12"
+               Height="25" 
+               Width="60"
+               VerticalAlignment="Top" 
+               HorizontalAlignment="Left"/>
 
-        <ComboBox x:Name="cbSort" HorizontalAlignment="Left" Height="30" Margin="75,25,0,0"
-                  VerticalAlignment="Top" Width="222" FontSize="16" SelectionChanged="CbSort_SelectionChanged"
-                  SelectedIndex="0">
-            <Label Content="фамилиям умерших персон" Width="200" FontSize="14"/>
-            <Label Content="фамилиям живущих персон" Width="200" FontSize="14"/>
-            <Label Content="дню и месяцу рождения" Width="200" FontSize="14"/>
-            <Label Content="первой профессии" Width="200" FontSize="14"/>
+        <ComboBox x:Name="cbSort" Margin="75,25,0,0"
+                  SelectionChanged="CbSort_SelectionChanged"
+                  Style="{StaticResource ComboBoxStyle}">
+            <Label Content="Last name"
+                   Style="{StaticResource SortLabelStyle}"/>
+            <Label Content="First name "
+                   Style="{StaticResource SortLabelStyle}"/>
+            <Label Content="Birth Date"
+                   Style="{StaticResource SortLabelStyle}"/>
+            <Label Content="First profession"
+                   Style="{StaticResource SortLabelStyle}"/>
         </ComboBox>
+
+        <StatusBar Margin="0,338.334,0,0"
+                   Style="{StaticResource StatusBarStyle}"/>
+
     </Grid>
 </Window>
